@@ -1,0 +1,6 @@
+(define (compile-program x)
+  (display "\t.text\n")
+  (display "\t.globl _scheme_entry\n")
+  (display "_scheme_entry:\n")
+  (display (format "\tmovl $~a, %eax\n" x))
+  (display "\tret\n"))
